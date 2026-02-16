@@ -1,302 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Mae Rheegin - Portfolio</title>
-    <link rel="stylesheet" href="fonts/font-awesome.css">
-    <link rel="stylesheet" href="fonts/google-fonts.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery.js"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<!-- header section starts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js" integrity="sha512-CX7sDOp7UTAq+i1FYIlf9Uo27x4os+kGeoT7rgwvY+4dmjqV0IuE/Bl5hVsjnQPQiTOhAX1O2r2j5bjsFBvv/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Smooch&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animation.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- <link rel="icon" href="img/Chino-04.png" sizes="32x32" /> -->
+    <title>Rhegine | Portfolio</title>
 
-<header>
-<a href="#" class="logo"><h1></h1></a>
-
-<nav>
-    <ul>
-        <li><a href="#home">home</a></li>
-        <li><a href="#about">about</a></li>
-        <li><a href="#skill">skills</a></li>
-        <li><a href="#work">work</a></li>
-        <li><a href="#contact">contact</a></li>
-    </ul>
-</nav>
-
-<div class="fas fa-bars"></div>
 
 
 
-</header>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v15.0'
+        });
+      };
 
-<!-- header section ends -->
-
-<!-- home section starts -->
-
-<section id="home">
-
-   <div class="content">
-
-    <h1>
-        <span>Rhegine Jarabe</span>
-    </h1>
-
-    <h3>
-        <span>General Virtual Assistant | Admin & Customer Support</span>
-    </h3>
-
-    <a href="#about"><button>about me</button></a>
-
-    <div class="icons">
-        <a href="#" class="fab fa-facebook-square"></a>
-        <a href="#" class="fab fa-twitter-square"></a>
-        <a href="#" class="fab fa-instagram-square"></a>
-        <a href="#" class="fab fa-linkedin"></a>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+  </head>
+  <body>
+    <div class="loading-screen" id="loading-screen">
+      <div class="spinner-container" style="padding-bottom: 20px;">
+        <img src="./img/pic2.png"/>
+        <div class="spinner"></div>
+      </div>
+      <p>Loading My Portfolio, Please wait...</p>
     </div>
+    <header>
+      <div class="user">
+        <a href="index.html">
+          <h3 class="name josefins">Rhegine</h3>
+        </a>
+      </div>
 
-   </div> 
+      <div id="close" class="hide">×</div>
+      <div id="hamburger-menu">
+        <div class="ham"></div>
+        <div class="ham"></div>
+        <div class="ham"></div>
+      </div>
+      <div id="side-nav"> 
+        <div class="user">
+          <a href="index.html">
+            <h3 class="name josefins">Rhegine</h3>
+          </a>
+        </div>
+        <ul>
+          <a href="#home">
+            <li>Home</li>
+          </a>
+          <a href="#about">
+            <li>About</li>
+          </a>
+          <a href="#skills">
+            <li>Skill</li>
+          </a>
+          <a href="#portfolio">
+            <li>Works</li>
+          </a>
+          <a href="#contact">
+            <li>Contact</li>
+          </a>
+       </ul>
+      </div>
 
+      <nav class="navbar">
+        <ul>
+          <li><a class="nav-home" href="#home">Home</a></li>
+          <li><a class="nav-about" href="#about">About</a></li>
+          <li><a class="nav-skill" href="#skills">Skill</a></li>
+          <li><a class="nav-project" href="#portfolio">Project</a></li>
+          <li><a class="nav-contact" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Your SDK code -->
+    
 
-   <div class="image">
-       <img src="images/pic.png" alt="">
-   </div>
+    <section class="hero" id="home">
+      <div class="text">
+        <h1><span class="blue">Rhegine Jarabe</span></h1>
+        <p class="typewriter">
+          <span data-text="General Virtual Assistant, Admin, Customer Support"></span>
+        </p>
+        <p class="quote">
+          "Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time."
+        </p>
+        <p class="resume">
+          <span class="blue"></span>
+          <a href="pdf/Mae-Rheegin-CV.pdf" target="_blank">
+            Resumé <i class="fas fa-folder-open"></i
+          ></a>
+          <span class="blue"></span>
+        </p>
+      </div>
+      <div class="img"></div>
 
-</section>
+      <div id="mouse-scroll">
+        <div class="mouse">
+          <div class="mouse-in"></div>
+        </div>
+        <div>
+          <span class="down-arrow-1"></span>
+          <span class="down-arrow-2"></span>
+          <span class="down-arrow-3"></span>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="about">
+      <div class="heading">
+        <p class="josefins">
+          About
+        </p>
+      </div>
+      <p class="comment inform">/* Personal Information */</p>
+      <div class="container">
+        <div class="info">
+          <p class="comment">//Socials</p>
+          <div class="social-wrapper">
+            <a class="linkedIn" href="https://www.linkedin.com/in/maruelle-gulfan-a04777235/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a class="linkedIn" href="https://github.com/maruelle-gulfan" target="_blank"
+              ><i class="fab fa-github-square"></i
+            ></a>
+            <a class="linkedIn" href="https://www.facebook.com/chingmaching08/" target="_blank"
+              ><i class="fab fa-facebook-square"></i
+            ></a>
+            <a class="linkedIn" href="https://www.instagram.com/chingmahh/" target="_blank"
+              ><i class="fab fa-instagram-square"></i
+            ></a>
+          </div>
+          <p class="comment">//Introduction</p>
+          <div class="introduction">
+            <p style="padding-top: 10px; text-align: justify">
+              Hello, I'm <span style="color: #7c2134 ;">Rhegine</span>. a General Virtual Assistant with professional experience in sales, cashiering, child care, and store management.
+              I bring strong customer service, organization, and administrative skills developed through real-world work experience. 
+              I`m reliable, detail-oriented, and eager to support business owners by handling daily tasks efficiently
+            </p>
+            <!-- <div class="current-work" style="display:flex;"> -->
+                <!-- <span class="red company"></span>
+                <span class="company">&#128142;</span> -->
+                <!-- <span class="red company">MLHUILLIER</span> -->
+              <!-- </div> -->
 
-<!-- home section ends -->
+            <p class="comment">//About Me</p>
+            <p class="myself">
+              Name = <span class="blue">'</span>
+              <span class="myInfo">Mae Rheegin Jarabe</span>
+              <span class="blue">'</span>
+            </p>
 
+            <p class="myself">
+              Nickname = <span class="blue">'</span>
+              <span class="myInfo">Rheg</span>
+              <span class="blue">'</span>
+            </p>
 
-<!-- about section starts  -->
+            <p class="myself">
+              Occupation = <span class="blue">'</span>
+              <span class="myInfo">General Virtual Assistant</span>
+              <span class="blue">'</span>
+            </p>
 
-<section id="about">
+            <p class="myself">
+              Birthday = <span class="blue">'</span>
+              <span class="myInfo">October 26, 1996</span>
+              <span class="blue">'</span>
+            </p>
 
-<h1>about</h1>
+            <p class="myself">
+              Nationality = <span class="blue">'</span>
+              <span class="myInfo">Filipino</span>
+              <span class="blue">'</span>
+            </p>
 
-<div class="wrapper">
+            <p class="myself">
+              Address = <span class="blue">'</span>
+              <span style="font-size: 16px" class="myInfo"
+                >Minglanilla, Cebu</span
+              >
+              <span class="blue">'</span>
+            </p>
 
-<div class="image">
-    <img src="images/pic2.png" alt="">
-</div>
+            <p class="myself">
+              Phone = <span class="blue">'</span>
+              <span class="myInfo">09566024005</span>
+              <span class="blue">'</span>
+            </p>
 
-<div class="content">
-    <h3>Hi! I`m Mae Rheegin Jarabe</h3>
-    <p>a General Virtual Assistant with professional experience in sales, cashiering, child care, and store management. I bring strong customer service, organization, and administrative skills developed through real-world work experience. I’m reliable, detail-oriented, and eager to support business owners by handling daily tasks efficiently</p>
-    <a href="#"><button>download resume</button></a>
-</div>
+            <p class="myself">
+              Email = <span class="blue">'</span>
+              <span class="myInfo">maerheegin.jarabe@gmail.com</span>
+              <span class="blue">'</span>
+            </p>
+          </div>
 
-</div>
+          <p class="comment">//Hobbies</p>
+          <div class="hobbies">
+            <p class="basketball">
+              <i class="fas fa-basketball-ball"></i>
+            </p>
 
-</section>
+            <p class="swimming">
+              <i class="fas fa-swimmer"></i>
+            </p>
 
-<!-- about section ends  -->
+            <p class="travel">
+              <i class="fas fa-plane"></i>
+            </p>
+            <p class="code">
+              <i class="fas fa-laptop-code"></i>
+            </p>
+          </div>
+        </div>
+        <div class="picture">
+          <img src="img/pic2.png" alt="" />
+        </div>
+      </div>
+    </section>
 
-<!-- skills section starts  -->
-
-<section id="skill">
-
-<h1>skills</h1>
-
-<div class="wrapper">
-
-    <div class="image">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque aspernatur quo quae enim vel amet, dignissimos neque soluta! Provident, assumenda.</p>
-        <img src="images/image.png" alt="">
-    </div>
-
-    <div class="progress">
-
-        <h3>Customer Service</h3>
-        <div class="line line1"><span class="fill"></span></div>
-
-        <h3>Time Management</h3>
-        <div class="line line2"><span class="fill"></span></div>
-
-        <h3>Multitasking</h3>
-        <div class="line line3"><span class="fill"></span></div>
-
-        <h3>Attention to Detail</h3>
-        <div class="line line1"><span class="fill"></span></div>
-
-        <h3>Problem Solving</h3>
-        <div class="line line2"><span class="fill"></span></div>
-
-        <h3>Communication</h3>
-        <div class="line line1"><span class="fill"></span></div>
-    </div>
-
-</div>
-
-</section>
-
-<!-- skills section ends  -->
-
-
-<!-- work section starts  -->
-
-<section id="work">
-
-<h1>work</h1>
-
-<div class="box-container">
-
-<div class="box">
-    <img src="images/p1.jpg" alt="">
-    <a href="#"><button>view details</button></a>
-</div>
-
-<div class="box">
-    <img src="images/p2.jpg" alt="">
-    <a href="#"><button>view details</button></a>
-</div>
-
-<div class="box">
-    <img src="images/p3.jpg" alt="">
-    <a href="#"><button>view details</button></a>
-</div>
-
-<div class="box">
-    <img src="images/p4.jpg" alt="">
-    <a href="#"><button>view details</button></a>
-</div>
-
-<div class="box">
-    <img src="images/p5.jpg" alt="">
-    <a href="#"><button>view details</button></a>
-</div>
-
-<div class="box">
-    <img src="images/p6.jpg" alt="">
-    <a href="#"><button>view details</button></a>
-</div>
-
-</div>
-
-</section>
-
-<!-- work section ends  -->
-
-
-<!-- contact section starts  -->
-
-<section id="contact">
-
-<h1>contact</h1>
-
-<div class="wrapper">
-
-<div class="info">
-
-    <div class="item">
-        <h2><i class="fas fa-map-marker-alt"></i> address </h2>
-        <p>mumbai,<br>
-            maharashtra,<br>
-            india- 400104.  
+    <section class="skills" id="skills">
+      <div class="heading">
+        <p class="josefins"><span class="blue">Skills</span></p>
+      </div>
+      <div class="container">
+        
+        <div class="skills-side">
+          <div class="sub-header">
+          <p>
+            Expertise
           </p>
+        </div>
+
+          <p class="myskills">
+            Administrative Support
+          </p>
+          <p class="myskills">
+            Data Entry & File Organization
+          </p>
+          <p class="myskills">
+            Email & Chat Support
+          </p>
+          <p class="myskills">
+            Calendar & Schedule Management            
+          </p>
+          <p class="myskills">
+            Customer Service Assistance            
+          </p>
+          <p class="myskills">
+            Online Research            
+          </p>
+          <p class="myskills">
+            Order Processing Support            
+          </p>
+          <p class="myskills">
+            Basic Social Media Assistance            
+          </p>
+        </div>
+        <div class="services-side">
+          <div class="sub-header">
+            <p>
+              Tools
+            </p>
+          </div>
+          <div class="wrapper">
+            <div class="img-container">
+            <img src="/img/GWorkSpace.png" alt="">
+            </div>
+            <div class="img-container">
+              <img src="/img/Canva.png" alt="">
+            </div>
+            <div class="img-container">
+              <img src="/img/Zoom.png" alt="">
+            </div>
+            <div class="img-container">
+              <img src="/img/M-Office.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project" id="portfolio">
+      <div class="heading">
+        <p class="josefins">Works</p>
+      </div>
+      <div class="container">
+        <div class="card">
+            <div class="content">
+                <h2>01</h2>
+                <h3>MJ's Beauty and Wellness Shop</h3>
+                <p class="desc">A beauty and wellness website made with canva
+                </p>
+                <a href="https://mj-beauty-shop.my.canva.site/" target="_blank">VISIT SITE</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2>02</h2>
+                <h3>Google Calendar Management</h3>
+                <p class="desc">Make Meetings appointments using google calendar
+                </p>
+                <!-- <a href="http://www.suma-biz.com/" target="_blank">VISIT SITE</a> -->
+            </div>
+        </div>
+        <!-- <div class="card">
+            <div class="content">
+                <h2>03</h2>
+                <h3>NA CORP</h3>
+                <p class="desc">NA 'enue' Corp is a japanese website I finished around 2021. This website is about a construction firm website that provides the best services.
+                </p>
+                <p class="made">MADE WITH : 
+                  <i class="fa-brands fa-html5"></i>
+                  <i class="fa-brands fa-js"></i>
+                  <i class="fa-brands fa-css3-alt"></i>
+                </p>
+                <a href="https://naproject.net/" target="_blank">VISIT SITE</a>
+            </div>
+        </div>
+
+        <div class="card">
+          <div class="content">
+              <h2>04</h2>
+              <h3>MYSTIQUE</h3>
+              <p class="desc">
+                Mystique is a japanese website I finished working on around 2020. It is an online e-commerce website to promote their physical store in japan.
+              </p>
+              <p class="made">MADE WITH : 
+                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-js"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+              </p>
+              <a href="http://mystique-group.co.jp/?gclid=CjwKCAiA17P9BRB2EiwAMvwNyIfFT5ZnqlrahI-Kto8BWLge0MR-Or5KlMyyrAExtu8VBgOK1H6AuxoCgLMQAvD_BwE/"
+              target="_blank">VISIT SITE</a>
+          </div>
+        </div> -->
+    <!-- </div> -->
+
+
+    <!-- <div class="container two"> -->
+
+      </div>
+    </section>
+
+
+    <section class="contact-me" id="contact">
+      <div class="heading" style="margin-bottom: 0; padding-bottom:0;">
+        <p class="josefins"><span class="blue">Contact</span></p>
+      </div>
+      <div class="container">
+        <div class="contact">
+          <div class="left">
+            <div class="headings">Contact Me</div>
+            <div class="para">Let's get down to business</div>
+            <div class="mapouter"><div class="gmap_canvas"><iframe width="400" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=minglanilla%20cebu&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com"></a><br><style>.mapouter{position:relative;text-align:right;height:400px;width:400px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:400px;border: 5px solid #FF5AA8;}</style></div></div>
+          </div>
+          <div class="right">
+            <div class="right_heading">Contact Information</div>
+            <div class="tabs">
+              <div class="tab1 tab">
+                <div class="email"><i class="fa-solid fa-envelope"></i></i>maruelle08@gmail.com</div>
+              </div>
+              <div class="tab2 tab">
+                <div class="phone"><i class="fa-solid fa-mobile-button"></i></i>0917-952-4753</div>
+              </div>
+              <div class="tab2 tab">
+                <div class="phone"><i class="fa-solid fa-phone"></i></i></i>032-383-6568</div>
+              </div>
+              <div class="tab3 tab">
+                <div class="location"><i class="fas fa-home"></i>Minglanilla, Cebu</div>
+              </div>
+            </div>
+            <p class="comment inform">/* Social Medias */</p>
+            <div class="social">
+              <a href="https://www.facebook.com/chingmaching08/" target="_blank">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/maruelle-gulfan-a04777235/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://www.instagram.com/chingmahh/" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://github.com/maruelle-gulfan" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+    </section>
+
+
+    <!-- <section class="modal hidden">
+      <div class="wrapper">
+        <button class="btn-close">⨉</button>
+        <div class="quote-title">Quote of the Day</div>
+        <div class="content">
+          <div class="quote-area">
+            <i class="fas fa-quote-left"></i>
+            <p class="q-quote">Nothing ever goes away until it has taught us what we need to know.</p>
+            <i class="fas fa-quote-right"></i>
+          </div>
+          <div class="author">
+            <span>__</span>
+            <span class="q-name">Pema Chödrön</span>
+          </div>
+        </div>
+        <div class="buttons">
+          <div class="features">
+            <ul>
+              <li class="speech"><i class="fas fa-volume-up"></i></li>
+              <li class="copy"><i class="fas fa-copy"></i></li>
+              <li class="twitter"><i class="fab fa-twitter"></i></li>
+            </ul>
+            <button id="newQuote">New Quote</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="overlay hidden"></div>
+    <button class=" btn-open">
+    <div class="day-quote">
+      <i class="fa-sharp fa-solid fa-quote-right"></i>
+      
+    </div>
+    </button> -->
+
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
     </div>
 
-    <div class="item">
-        <h2><i class="fas fa-envelope"></i> e-mail </h2>
-        <p>xyz@gmail.com</p>
-    </div>
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "222171674466874");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
 
-    <div class="item">
-        <h2><i class="fas fa-phone"></i> phone </h2>
-        <p>+910000000</p>
-    </div>
+    
 
-</div>
+    <script src="/js/all.js"></script>
+    <script src="./js/animation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    
+  </body>
 
-<form action="">
-
-    <div class="inputBox">
-        <h3>full name</h3>
-        <input type="text">
-    </div>
-
-    <div class="inputBox">
-        <h3>e-mail</h3>
-        <input type="email">
-    </div>
-
-    <div class="inputBox">
-        <h3>message</h3>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-    </div>
-
-    <input type="submit" value="send">
-
-</form>
-
-</div>
-
-
-</section>
-
-<!-- contact section ends  -->
+  <script>
+    function closeLoadingScreen(loadingScreen) {
+    loadingScreen.style.transitionDuration = ".5s";
+    loadingScreen.style.transitionTimingFunction = "cubic-bezier(0,.75,.25,1)";
+    loadingScreen.style.opacity = 0;
+    loadingScreen.style.borderRadius = "40px";
+    loadingScreen.style.transform = "scale(0.75)";
+    loadingScreen.style.cursor = "initial";
+    setTimeout(() => {
+      loadingScreen.parentNode.removeChild(loadingScreen);
+    }, 500)
+  }
+  
+  document.body.onload = ()=>{
+    lscreen = document.getElementById("loading-screen");
+    
+    // load any data and call the function "closeLoadingScreen(lscreen)"
+  
+    setTimeout(()=>{closeLoadingScreen(lscreen)}, 1000); // FOR DEMO
+  }
 
 
-<!-- footer section starts  -->
-
-<section id="footer">
-
-    <a href="#" class="logo"><h1>logo</h1></a>
-
-    <div class="icons">
-        <a href="#" class="fab fa-facebook-square"></a>
-        <a href="#" class="fab fa-twitter-square"></a>
-        <a href="#" class="fab fa-instagram-square"></a>
-        <a href="#" class="fab fa-linkedin"></a>
-    </div>
-
-    <h1>&copy; copyright @ 2020 by <span>mr. web designer</span></h1>
-
-</section>
-
-<!-- footer section ends  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- jquery/js part -->
-
-
-<script>
-
-$(document).ready(function(){
-
-    $('.fa-bars').click(function(){
-        $(this).toggleClass('fa-times');
-        $('nav').toggleClass('nav-toggle');
-    });
-
-    $('nav ul li a').click(function(){
-        $('.fa-bars').removeClass('fa-times');
-        $('nav').removeClass('nav-toggle');
-    });
-
-    $(window).scroll(function(){
-        if($(window).scrollTop() < 20){
-            $('header').css('box-shadow','none');
-        }else{
-            $('header').css('box-shadow','0 .2rem .5rem #333');
-        }
-    });
-
-});
-
-</script>
-
-</body> 
+   
+  </script>
 </html>
