@@ -65,7 +65,7 @@ window.addEventListener("scroll", function (e) {
     document.querySelector(".nav-project").classList.remove("current");
     document.querySelector(".nav-contact").classList.remove("current");
   }
-  if(window.pageYOffset > 2850) {
+  if(window.pageYOffset > 2300) {
     document.querySelector(".nav-project").classList.add("current");
     document.querySelector(".nav-home").classList.remove("current");
     document.querySelector(".nav-about").classList.remove("current");
@@ -73,7 +73,7 @@ window.addEventListener("scroll", function (e) {
     document.querySelector(".nav-contact").classList.remove("current");
   }
 
-  if(window.pageYOffset > 4000) {
+  if(window.pageYOffset > 3000) {
     document.querySelector(".nav-contact").classList.add("current");
     document.querySelector(".nav-home").classList.remove("current");
     document.querySelector(".nav-about").classList.remove("current");
